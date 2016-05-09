@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Datepicker Demo</title>
+<link rel="stylesheet" href="ui.datepicker.css" type="text/css" media="screen" title="Flora (Default)" />
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="ui.datepicker.js"></script>
+
+</head>
+<body >
+<div >
+	
+	<input type="text" id="example2" size="10"/>
+	<script type="text/jsdemo" charset="utf-8" class="demojs">
+	$('#example2').datepicker({showOn: 'both', showOtherMonths: true, 
+		showWeeks: true, firstDay: 1, changeFirstDay: false,
+		buttonImageOnly: true, buttonImage: 'calendar.gif'});	
+	</script>
+</div>
+
+
+<script type="text/javascript">
+if (!window.console) {
+	window.console = {
+		log: function() {
+			alert(arguments[0]);	
+		}
+	}
+}
+
+$(window).bind("load",function(){
+	$.datepicker.setDefaults($.datepicker.regional['']);
+	$(".demojs").each(function () {
+		
+		$('.codeLink').click(function() {
+			$(this).hide().siblings('pre').show();
+		});
+		eval($(this).html());
+	});
+});
+</script>
+</body>
+</html>
